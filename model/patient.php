@@ -42,15 +42,17 @@ class Patient {
     public $password;
     public $name;
     public $age;
+    public $contact;
     public $doctor;
     public $hospital;
 
 
-    public function __construct($username, $password, $name, $age, $doctor, $hospital) {
+    public function __construct($username, $password, $name, $age, $contact, $doctor, $hospital) {
       $this->username      = $username;
       $this->password  = $password;
       $this->name = $name;
       $this->age = $age;
+      $this->contact = $contact;
       $this->doctor = $doctor;
       $this->hospital = $hospital;
     }
@@ -71,12 +73,12 @@ class Patient {
                   } 
                
 
-                          $stmt = $conn->prepare("INSERT INTO patient (username, password, name, age, doctor, hospital)
-                                                VALUES ( ?, ?, ?, ?, ?, ?)");
+                          $stmt = $conn->prepare("INSERT INTO patient (username, password, name, age, emergency_contact, doctor, hospital)
+                                                VALUES ( ?, ?, ?, ?, ?, ?,?)");
                           //echo "pliss";
                             // var_dump($this->username);
                             // die();
-                         $stmt->bind_param("ssssss", $this->username, $this->password, $this->name, $this->age, $this->doctor, $this->hospital );
+                         $stmt->bind_param("sssssss", $this->username, $this->password, $this->name, $this->age, $this->contact, $this->doctor, $this->hospital );
                          //die("in save");
                          $stmt->execute();
                          $stmt->close();
