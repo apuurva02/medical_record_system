@@ -2,9 +2,12 @@
 
 <body>
 
-<a href='?controller=patient&action=display'>patient</a>
-<a href='?controller=patient&action=register'>patient Register</a>
-<a href='?controller=doctor&action=index'>Doctor</a>
+<a href='?controller=patient&action=display'>patient login</a><br>
+<a href='?controller=patient&action=register'>patient Register</a><br>
+<a href='?controller=patient&action=logout'>patient logout</a><br>
+<a href='?controller=doctor&action=display'>Doctor login</a><br>
+<a href='?controller=doctor&action=register'>doctor Register</a><br>
+<a href='?controller=doctor&action=logout'>doctor logout</a><br>
 </body>
 
 <?php

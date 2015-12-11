@@ -1,58 +1,25 @@
 <?php
 
-       /* $servername = "localhost";
-                $user = "root";
-                $pass = "Redredred321";
-                $dbname = "gh";
-                
-        
-                $conn = new mysqli($servername, $user, $pass, $dbname);
-                if ($conn->connect_error) 
-                  {
-                        die("Connection failed: " . $conn->connect_error);
-                  } 
-               
-                          $stmt = $conn->prepare("INSERT INTO patient (username, password, name, age, doctor, hospital)
-                                                VALUES ( ?, ?, ?, ?, ?, ?)");
-                       
-                         $stmt->bind_param("ssssss", $username, $password, $name, $age, $doctor, $hospital );
-                         $stmt->execute();
-                         $stmt->close();
-        
-                
-                       
-       
-               
-               $conn->close();
 
-               $list = [];
-      $db = Db::getInstance();
-      $req = $db->query('SELECT * FROM posts');
-
-      // we create a list of Post objects from the database results
-      foreach($req->fetchAll() as $post) {
-        $list[] = new Post($post['id'], $post['author'], $post['content']);
-      }
-
-      return $list;*/
-
-class Patient {
+class Doctor {
     
     public $username;
     public $password;
     public $name;
     public $age;
-    public $doctor;
+    
     public $hospital;
+    public $qualification;
 
 
-    public function __construct($username, $password, $name, $age, $doctor, $hospital) {
+    public function __construct($username, $password, $name, $age, $hospital, $qualification) {
       $this->username      = $username;
       $this->password  = $password;
       $this->name = $name;
       $this->age = $age;
-      $this->doctor = $doctor;
+      
       $this->hospital = $hospital;
+      $this->qualification = $qualification;
     }
 
     public function save()
@@ -71,12 +38,12 @@ class Patient {
                   } 
                
 
-                          $stmt = $conn->prepare("INSERT INTO patient (username, password, name, age, doctor, hospital)
+                          $stmt = $conn->prepare("INSERT INTO doctor (username, password, name, age, hospital, qualification)
                                                 VALUES ( ?, ?, ?, ?, ?, ?)");
                           //echo "pliss";
                             // var_dump($this->username);
                             // die();
-                         $stmt->bind_param("ssssss", $this->username, $this->password, $this->name, $this->age, $this->doctor, $this->hospital );
+                         $stmt->bind_param("ssssss", $this->username, $this->password, $this->name, $this->age, $this->hospital, $this->qualification );
                          //die("in save");
                          $stmt->execute();
                          $stmt->close();
@@ -104,7 +71,7 @@ class Patient {
                   } 
                 
                 
-        if ($stmt = $conn->prepare("SELECT name FROM patient WHERE username=? AND password=?")) 
+        if ($stmt = $conn->prepare("SELECT name FROM doctor WHERE username=? AND password=?")) 
         {
           
         
@@ -120,7 +87,7 @@ class Patient {
               //die("logged in");
                             session_start();
                             $_SESSION['username']=$username;
-                            $_SESSION['user_type']="patient"; 
+                            $_SESSION['user_type']="doctor"; 
                             
                           
                              

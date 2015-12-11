@@ -16,7 +16,7 @@
     {
       //echo "in insert controller";
       include('model/patient.php');
-      $patient = new Patient($_POST["username"],$_POST["password"],$_POST["name"],$_POST["age"],$_POST["doctor"],$_POST["hospital"]);
+      $patient = new Patient($_POST["username"],$_POST["password"],$_POST["name"],$_POST["age"],$_POST["contact"],$_POST["doctor"],$_POST["hospital"]);
       // var_dump($patient);
       // die();
      $patient->save();
@@ -156,7 +156,12 @@ print_r($_FILES);
 }
 
 }
+public function logout()
+{
+header('location: view/patient/logout.php');  
+
   }
+}
 
 
  

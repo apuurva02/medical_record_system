@@ -11,7 +11,7 @@
       break;
       case 'doctor':
         
-        require_once('model/doctor.php');
+        //require_once('model/doctor.php');
         $controller = new DoctorController();
       break;
     }
@@ -20,8 +20,8 @@
   }
 
   
-  $controllers = array('patient' => ['display','register', 'insert','login','upload','file_save'],
-                       'doctor' => ['display']);
+  $controllers = array('patient' => ['display','register', 'insert','login','upload','file_save','logout'],
+                       'doctor' => ['display','register','insert','login','logout']);
 
   if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {
