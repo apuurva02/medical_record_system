@@ -4,8 +4,16 @@
     public function display()
      {
       
-     
+      
       header('location: view/doctor/login.php');
+      
+    }
+    public function patient_list()
+     {
+      echo "hiiii";
+      include('model/doctor.php');
+      Doctor::list_patient();
+      //header('location: view/doctor/profile.php');
      
     }
     public function register()
@@ -16,9 +24,15 @@
     {
       //echo "in insert controller";
       include('model/doctor.php');
-      $doctor = new Doctor($_POST["username"],$_POST["password"],$_POST["name"],$_POST["age"],$_POST["hospital"],$_POST["qualification"]);
       
-     $doctor->save();
+      
+
+      //echo "saving";
+        $doctor = new Doctor($_POST["aadhaar"],$_POST["username"],$_POST["password"],$_POST["name"],$_POST["age"],$_POST["hospital"],$_POST["qualification"],$_POST["speciality"]);
+        $doctor->save();
+      
+      
+     
       
       
       header('location: view/doctor/registered.php');

@@ -62,6 +62,13 @@ echo "FILE UPLOADED SUCCESSFULLY!";
 
 
 
+
+
+}
+public function appt()
+{
+  header('location: view/patient/appt_patient.php');
+
 }
 public function logout()
 {
