@@ -1,4 +1,5 @@
 <?php
+<<<<<<< Updated upstream
 require_once('/var/www/html/GH/imports.php');
 ?>
 <body class="teal lighten-1">
@@ -76,3 +77,28 @@ require_once('/var/www/html/GH/imports.php');
     </div>
 </div>
 </body>
+=======
+
+$aadhaarErr = $usernameErr = $passwordErr = $nameErr = $ageErr = $hospitalErr = $qualificationErr =  "";
+$aadhaar = $username = $password = $name = $age = $hospital = $qualification =  "";
+?>
+<html>
+
+<h>Register</h>
+
+<form action="http://localhost/GH/?controller=doctor&action=insert" method="post">
+Adhar Number : <input type="number" name="aadhaar" value = "<?php echo $aadhaar; ?>"> <?php echo $aadhaarErr;?> <br>
+username: <input type="text" name="username" value = "<?php echo $username; ?>"> <?php echo $usernameErr;?>  <br>
+password: <input type="password" name="password" value = "<?php echo $password; ?>"> <?php echo $passwordErr;?>  <br>
+name : <input type="text" name="name" value = "<?php echo $name; ?>"> <?php echo $nameErr;?> <br>
+age : <input type="number" name="age" value = "<?php echo $hospital; ?>"> <?php echo $ageErr;?> <br>
+hospital : <input type="text" name="hospital"value = "<?php echo $qualification; ?>"> <?php echo $hospitalErr;?> <br>
+qualification : <input type="text" name="qualification" value = "<?php echo $speciality; ?>"> <?php echo $qualificationErr;?> <br>
+Speciality : <input type="text" name="speciality"><br>
+
+<input type="submit">
+</form>
+
+
+</html>
+>>>>>>> Stashed changes
