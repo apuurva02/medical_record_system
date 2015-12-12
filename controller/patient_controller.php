@@ -136,24 +136,31 @@ if ($uploadOk == 0)
 
    
    */ 
-$len = count($_FILES['uploadfiles']['name']);
-$uploaddir = '/home/apuurva/Desktop/';
+//$len = count($_FILES['uploadfiles']['name']);
 
 
-for($i = 0; $i < $len; $i++) {
-   echo $_FILES['uploadfiles']['tmp_name'][$i] . " ";
+$uploaddir = '/home/anugrahaa/uploads/';
+$ext = explode('/',$_FILES["uploadfiles"]["type"])[1];
+$target_file_name = "1.".$ext;
+$target_file = $uploaddir.$target_file_name;
+move_uploaded_file($_FILES["uploadfiles"]["tmp_name"],$target_file);
+echo "TARGET DIR: ".$target_file." FORM DATA SAVED IN DATABASE! TO SUBMIT ANOTHER FORM, CLICK HERE";
+
+
+//for($i = 0; $i < $len; $i++) {
+  // echo $_FILES['uploadfiles']['tmp_name'][$i] . " ";
    // change size to whatever key you need - error, tmp_name etc
-  $uploadfile = $uploaddir . basename($_FILES['uploadfiles']['name'][$i]);
-  var_dump($uploadfile);
-  if (move_uploaded_file($_FILES['uploadfiles']['tmp_name'][$i], $uploadfile)) {
-    echo "File is valid, and was successfully uploaded.\n";
-} else {
-    echo "Possible file upload attack!\n";
-}
+  //$uploadfile = $uploaddir . basename($_FILES['uploadfiles']['name'][$i]);
+  //var_dump($uploadfile);
+  //if (move_uploaded_file($_FILES['uploadfiles']['tmp_name'][$i], $uploadfile)) {
+   // echo "File is valid, and was successfully uploaded.\n";
+//} else {
+   // echo "Possible file upload attack!\n";
+//}
 
-echo 'Here is some more debugging info:';
-print_r($_FILES);
-}
+//echo 'Here is some more debugging info:';
+//print_r($_FILES);
+//}
 
 }
 public function logout()
