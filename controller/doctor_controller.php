@@ -4,7 +4,10 @@
     public function display()
      {
       
-      
+      session_start();
+     if($_SESSION['username'])
+      header('location: view/doctor/profile.php');
+      else
       header('location: view/doctor/login.php');
       
     }

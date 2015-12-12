@@ -1,6 +1,5 @@
 <?php
-<<<<<<< Updated upstream
-require_once('/var/www/html/GH/imports.php');
+require_once('F:\wamp\www\GH\imports.php');
 ?>
 <body class="teal lighten-1">
 <div class="row">
@@ -45,23 +44,23 @@ require_once('/var/www/html/GH/imports.php');
                                 <label for="password">Password</label>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="hospital" name="hospital" type="text" class="validate" required>
+                                <label for="hospital">Hospital</label>
+                            </div>
+                        </div>
 
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="email" name="email" type="email" class="validate" required>
-                                <label for="email">Email</label>
+                                <input id="qualification" name="qualification" type="text" class="validate" required>
+                                <label for="qualification">Qualification</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="phone" name="phone" placeholder="Enter a 10-digit valid mobile number" type="number" class="validate" required>
-                                <label for="phone">Phone</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="hospital" type="text" class="validate" required>
-                                <label for="hospital">Hospital</label>
+                                <input id="speciality" name="speciality" type="text" class="validate" required>
+                                <label for="speciality">Speciality</label>
                             </div>
                         </div>
                         <div class="row">
@@ -77,28 +76,3 @@ require_once('/var/www/html/GH/imports.php');
     </div>
 </div>
 </body>
-=======
-
-$aadhaarErr = $usernameErr = $passwordErr = $nameErr = $ageErr = $hospitalErr = $qualificationErr =  "";
-$aadhaar = $username = $password = $name = $age = $hospital = $qualification =  "";
-?>
-<html>
-
-<h>Register</h>
-
-<form action="http://localhost/GH/?controller=doctor&action=insert" method="post">
-Adhar Number : <input type="number" name="aadhaar" value = "<?php echo $aadhaar; ?>"> <?php echo $aadhaarErr;?> <br>
-username: <input type="text" name="username" value = "<?php echo $username; ?>"> <?php echo $usernameErr;?>  <br>
-password: <input type="password" name="password" value = "<?php echo $password; ?>"> <?php echo $passwordErr;?>  <br>
-name : <input type="text" name="name" value = "<?php echo $name; ?>"> <?php echo $nameErr;?> <br>
-age : <input type="number" name="age" value = "<?php echo $hospital; ?>"> <?php echo $ageErr;?> <br>
-hospital : <input type="text" name="hospital"value = "<?php echo $qualification; ?>"> <?php echo $hospitalErr;?> <br>
-qualification : <input type="text" name="qualification" value = "<?php echo $speciality; ?>"> <?php echo $qualificationErr;?> <br>
-Speciality : <input type="text" name="speciality"><br>
-
-<input type="submit">
-</form>
-
-
-</html>
->>>>>>> Stashed changes

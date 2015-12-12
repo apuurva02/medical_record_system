@@ -1,9 +1,7 @@
 
 <?php require_once('F:\wamp\www\GH\imports.php');
 	require_once('F:\wamp\www\GH\view\patient\validate_ph_no.php');
-=======
-<?php require_once('/var/www/html/GH/imports.php');
->>>>>>> upstream/master
+
 ?>
 <body class="teal lighten-3">
 <div class="row">
