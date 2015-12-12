@@ -15,7 +15,8 @@ if ($conn->connect_error) {
 $sql = "CREATE TABLE appointment (
 pid INT(6),
 doc_id INT(6),
-appt_date TIMESTAMP
+appt_date Date,
+appt_time Time
 
 
 )";

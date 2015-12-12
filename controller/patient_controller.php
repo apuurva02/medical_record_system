@@ -163,6 +163,10 @@ echo "TARGET DIR: ".$target_file." FORM DATA SAVED IN DATABASE! TO SUBMIT ANOTHE
 //}
 
 }
+public function appt()
+{
+  header('location: view/patient/appt_patient.php');
+}
 public function logout()
 {
 header('location: view/patient/logout.php');  
