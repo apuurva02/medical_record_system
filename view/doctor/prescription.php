@@ -2,6 +2,7 @@
 ?>
 <body class="teal lighten-3">
 <div class="container">
+    <form action="" method="POST">
 <div class="row">
     <div class = 'col s12'>
         <div class = "card-panel" style="height: 200px;">
@@ -26,29 +27,29 @@
                         <td><input id="med2"  type="text" tag ="med"required></td>
                         <td><input id="dose2" type="text" tag ="dose" required></td>
                     </tr>
-                    <tr>
-                        <td><input id="med3"  type="text" tag ="med"required></td>
-                        <td><input id="dose3" type="text" tag ="dose" required></td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
         </div>
   </div>
-</div>
+
 
 <div class = "row">
     <div class = "col s12 offset-s1">
-        <a class="waves-effect waves-light btn" onclick=on_save()
-           type="submit" name="save">SAVE</a>
-        <a class="waves-effect waves-light btn" onclick=to_add_new()><i class="material-icons left">add</i>Add Medicines</a>
+        <button class="waves-effect waves-light btn" onclick=to_add_new()><i class="material-icons left">add</i>Add Medicines</button>
+
+    <div class="right-align">
+            <button class="waves-effect waves-light btn right" onclick=on_save()
+                    type="submit" name="save">SAVE</button>
+    </div>
     </div>
 </div>
-
+</form>
+</div>
 </body>
 
 <script>
-    var i=4;
+    var i=3;
 
     function to_add_new(){
     //add new row with id incrementes as medi and dosei where i starts from 2
