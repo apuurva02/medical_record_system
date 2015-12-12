@@ -30,9 +30,9 @@
       call($controller, $action);
       }
     } else {
-      call('home', 'error');
+      //call('home', 'error');
     }
   } else {
-    call('home', 'error');
+    //call('home', 'error');
   }
 ?>

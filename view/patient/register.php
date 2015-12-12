@@ -1,4 +1,5 @@
-<?php require_once('../../../imports.php');
+<?php require_once('F:\wamp\www\GH\imports.php');
+	require_once('F:\wamp\www\GH\view\patient\validate_ph_no.php');
 ?>
 <div class="container">
 <div class="row">
@@ -32,49 +33,47 @@ REGISTER
 </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
+          <input id="password" name="password" type="password" class="validate">
           <label for="password">Password</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
+          <input id="email" name="email" type="email" class="validate">
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="phone" type="number" class="validate">
+          <input id="phone" name="phone" type="text" class="validate">
           <label for="phone">Phone</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="contact" type="number" class="validate">
+          <input id="contact" name="contact" type="number" class="validate">
           <label for="contact">Emergency Contact</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="doctor" type="number" class="validate">
+          <input id="doctor" name="doctor" type="number" class="validate">
           <label for="doctor">Doctor's Aadhaar No.</label>
         </div>
       </div>	
       <div class="row">
         <div class="input-field col s12">
-          <input id="hospital" type="hospital" class="validate">
+          <input id="hospital" name="hospital" type="hospital" class="validate">
           <label for="hospital">Hospital</label>
         </div>
       </div> 
-    </form>
-  </div>
+    
 <div class="row">
 <div class="col s4">&nbsp;</div>
 <div class="col s4"><button type="submit" class="btn btn-primary">SAVE</button>
 </div>
 </div>
-<form>
-<table> 
 </form>
+  </div>
 </div>
