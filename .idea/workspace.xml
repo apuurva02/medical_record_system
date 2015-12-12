@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ceaa98e-3340-4083-9211-a1551acea482" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/doctor/prescription.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/patient_controller.php" afterPath="$PROJECT_DIR$/controller/patient_controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports.php" afterPath="$PROJECT_DIR$/imports.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/doctor/register.php" afterPath="$PROJECT_DIR$/view/doctor/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/patient/register.php" afterPath="$PROJECT_DIR$/view/patient/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/patient/upload.php" afterPath="$PROJECT_DIR$/view/patient/upload.php" />
-    </list>
+    <list default="true" id="1ceaa98e-3340-4083-9211-a1551acea482" name="Default" comment="" />
     <ignored path="GH.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
