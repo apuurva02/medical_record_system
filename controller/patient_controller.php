@@ -4,7 +4,11 @@
     public function display()
      {
       
-     
+     session_start();
+     if(isset($_SESSION))
+     if($_SESSION['username'])
+      header('location: view/patient/profile.php');
+      else
       header('location: view/patient/login.php');
      
     }

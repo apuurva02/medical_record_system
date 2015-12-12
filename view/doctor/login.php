@@ -7,6 +7,6 @@ Password: <input type="password" name="password"></input>
 <input type="submit">
 </form>
 <?php
-require_once('routes.php');
+require_once('F:\wamp\www\GH\routes.php');
 ?>
 </html>

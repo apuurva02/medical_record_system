@@ -1,6 +1,4 @@
 <?php
-  
-  
   function call($controller, $action) {
     require_once('controller/' . $controller . '_controller.php');
 
