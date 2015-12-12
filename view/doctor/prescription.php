@@ -1,12 +1,14 @@
-<?php require_once('/var/www/html/GH/imports.php');
+<?php require_once('F:\wamp\www\GH\imports.php');
+session_start();
+$_SESSION['pid']=$_GET['pid'];
 ?>
 <body class="teal lighten-3">
 <div class="container">
-    <form action="" method="POST">
+    <form action="http://localhost/GH/?controller=doctor&action=prescription" method="POST">
 <div class="row">
     <div class = 'col s12'>
         <div class = "card-panel" style="height: 200px;">
-                <textarea id="diag" name="diag" rows="50" max-width="50" placeholder="Enter Diagnosis here" style="height: 165px;resize: none;"required></textarea>
+                <textarea id="diagnosis" name="diagnosis" rows="50" max-width="50" placeholder="Enter Diagnosis here" style="height: 165px;resize: none;"required></textarea>
         </div>
     </div>
  <div class="col s12"  >
@@ -20,12 +22,12 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td><input id="med1"  type="text" tag ="med"required></td>
-                        <td><input id="dose1" type="text" tag ="dose" required></td>
+                        <td><input id="med1" name="med1" type="text" tag ="med"></td>
+                        <td><input id="dose1" name="dose1"type="text" tag ="dose" ></td>
                     </tr>
                     <tr>
-                        <td><input id="med2"  type="text" tag ="med"required></td>
-                        <td><input id="dose2" type="text" tag ="dose" required></td>
+                        <td><input id="med2" name="med2" type="text" tag ="med"></td>
+                        <td><input id="dose2" name="dose2"type="text" tag ="dose" ></td>
                     </tr>
                     </tbody>
                 </table>
@@ -54,7 +56,7 @@
     function to_add_new(){
     //add new row with id incrementes as medi and dosei where i starts from 2
         var table = document.getElementById("myTable");
-        table.innerHTML+='<tr><td><input id="med'+i+'"  type="text" tag ="med"required></td><td><input id="dose'+i+'"  type="text" tag ="dose" required></td> <td>';
+        table.innerHTML+='<tr><td><input id="med'+i+'" name="med'+i+'" type="text" tag ="med"></td><td><input id="dose'+i+'" name="dose'+i+'" type="text" tag ="dose"></td> <td>';
     }
 
     function on_save(){

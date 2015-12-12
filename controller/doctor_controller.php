@@ -15,9 +15,22 @@
      {
       echo "hiiii";
       include('model/doctor.php');
-      Doctor::list_patient();
-      //header('location: view/doctor/profile.php');
+      $_SESSION['ptList'] = Doctor::list_patient();
+      header('location: view/doctor/patient_list.php');
      
+    }
+    public function prescription()
+    { 
+      $i = 1;
+      while($_POST['med'.$i])
+      {
+        $prescription[$i][0] = $_POST['med'.$i];
+        $prescription[$i][1] = $_POST['dose'.$i];
+        $i++;
+      }
+      //var_dump($prescription);
+      require_once('model/appt.php');
+      Appt::update($prescription,$_POST['diagnosis']);
     }
     public function register()
     {

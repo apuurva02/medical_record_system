@@ -126,18 +126,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $doctor =$_SESSION['username'];
-$sql="SELECT name, age FROM patient WHERE doctor='$doctor'";
+$sql="SELECT name, age, username FROM patient WHERE doctor='$doctor'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+  $i=0;
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "name: " . $row["name"]. " - age: " . $row["age"];
-    }
-}
- else {
-    echo "0 results";
-}
+      $arr[$i]=$row;   
+       $i++;
+     }
+  }
+  return $arr;
 $conn->close();
   }
 }

@@ -24,7 +24,7 @@
 
   
   $controllers = array('patient' => ['display','register', 'insert','login','upload','file_save','logout','appt'],
-                       'doctor' => ['display','register','insert','login','logout','list','patient_list'],
+                       'doctor' => ['display','register','insert','login','logout','list','patient_list','prescription','update'],
                        'admin' => ['display','login','logout']);
 
   if (array_key_exists($controller, $controllers)) {

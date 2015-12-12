@@ -13,10 +13,14 @@ if ($conn->connect_error) {
 
 // sql to create table
 $sql = "CREATE TABLE appointment (
-pid INT(6),
-doc_id INT(6),
-appt_date Date,
-appt_time Time
+
+docid VARCHAR(20),
+pid VARCHAR(20),
+approved TINYINT(1),
+prescription VARCHAR(500) DEFAULT '0',
+diagnosis VARCHAR(200),
+dateappt Date,
+timeappt Time
 
 
 )";
