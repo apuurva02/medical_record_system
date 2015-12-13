@@ -16,6 +16,7 @@ $sql = "CREATE TABLE appointment (
 
 docid VARCHAR(20),
 pid VARCHAR(20),
+reason VARCHAR(200),
 approved TINYINT(1),
 prescription VARCHAR(500) DEFAULT '0',
 diagnosis VARCHAR(200),

@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE);
 //session_start();
 require_once('connection.php');
 
@@ -14,7 +15,10 @@ else
 {
 	$controller = "home";
 	$action = "display";
+	   include('view\home.php');
     }
+  require_once('F:\wamp\www\GH\routes.php');
+require_once('F:\wamp\www\GH\imports.php');
 //if(!empty($_SESSION))
 //{if($_SESSION['username'])
 // {
@@ -27,7 +31,7 @@ else
 
 // }
 // else{ session_destroy();
-    include('view\home.php'); 
+  
 //}
     //require_once('F:\wamp\www\GH\routes.php'); 
 

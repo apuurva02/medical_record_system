@@ -3,12 +3,11 @@
  {
     public function display()
      {
-      
      session_start();
      if(isset($_SESSION))
      if($_SESSION['username'])
       header('location: view/patient/profile.php');
-      else
+    else
       header('location: view/patient/login.php');
      
     }
@@ -73,6 +72,18 @@ public function appt()
 {
   header('location: view/patient/appt_patient.php');
 
+}
+public function insert_appt()
+{
+  require_once('model/appt.php');
+  Appt::save();
+}
+public function medication()
+{
+  require_once('model/appt.php');
+  
+  $_SESSION['medi'] = Appt::medication();
+  header('location: view/patient/medication_patient.php');
 }
 public function logout()
 {

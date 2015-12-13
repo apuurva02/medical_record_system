@@ -23,8 +23,8 @@
   }
 
   
-  $controllers = array('patient' => ['display','register', 'insert','login','upload','file_save','logout','appt'],
-                       'doctor' => ['display','register','insert','login','logout','list','patient_list','prescription','update'],
+  $controllers = array('patient' => ['display','register', 'insert','login','upload','file_save','logout','appt','insert_appt','medication'],
+                       'doctor' => ['display','register','insert','login','logout','list','patient_list','prescription','update','appt_approve'],
                        'admin' => ['display','login','logout']);
 
   if (array_key_exists($controller, $controllers)) {

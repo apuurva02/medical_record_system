@@ -3,6 +3,17 @@ session_start();
 $_SESSION['pid']=$_GET['pid'];
 ?>
 <body class="teal lighten-3">
+    <header>
+    <nav class="teal darken-4" role="presentation">
+        <div class="container">
+            <div class="nav-wrapper"><a class="page-title">Hello <?php echo $_SESSION['username'];?></a>
+            </div>
+        </div>
+        <ul class="right">
+            <li><a href="http://localhost/GH/?controller=admin&action=logout" class ="waves-effect waves-light btn"  >Log Out</a></li>
+        </ul>
+       </nav>
+</header>
 <div class="container">
     <form action="http://localhost/GH/?controller=doctor&action=prescription" method="POST">
 <div class="row">

@@ -13,7 +13,7 @@
     }
     public function patient_list()
      {
-      echo "hiiii";
+      //echo "hiiii";
       include('model/doctor.php');
       $_SESSION['ptList'] = Doctor::list_patient();
       header('location: view/doctor/patient_list.php');
@@ -73,7 +73,22 @@
     {
       header('location: view/doctor/logout.php');
     }
-
+    public function appt_approve()
+    {
+      session_start();
+      require_once('model/appt.php');
+      if(isset($_GET['pid']))
+      {
+        if($pid=$_GET['pid'])
+        { 
+          $a = $_GET['app'];
+          Appt::approve($pid,$a);
+        }
+      }
+      
+      $_SESSION['appts'] = Appt::display();
+      header('location: view/doctor/appt_approve.php');
+    }
 
    
   }
